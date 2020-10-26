@@ -12,6 +12,7 @@ class Db {
 		$config = require 'application/config/db.php';
 		$this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['name'].'', $config['user'], $config['password']);
 		$this->link = mysqli_connect($config['host'], $config['user'], $config['password'], $config['name']);
+		//var_dump($this->link);
 		}  
 
 	public function query($sql, $params = []) {
@@ -22,6 +23,7 @@ class Db {
 			}
 		}
 		$stmt->execute();
+		//var_dump($stmt);
 		return $stmt;
 	}
    
