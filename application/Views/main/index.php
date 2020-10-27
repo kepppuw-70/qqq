@@ -13,6 +13,22 @@
             <th class="c">Заполнено</th>
             <th class="c">Редактированно</th>
     	</tr>
+        <tr>
+            <form action="" method="post">
+            <td><input type="text" size="1" name="id"></td>
+            <td><input type="text" size="15" name="firstname"></td>
+            <td><input type="text" size="15" name="secondname"></td>
+            <td><input type="text" size="15" name="email"></td>
+            <td><input type="text" size="15" name="login"></td>
+            <td><input type="text" size="15" name="password"></td>
+            <td><input type="text" size="1" name="userrol"></td>
+            <td><input type="text" size="20" name="datacreate"></td>
+            <td><input type="text" size="20" name="dataupdate"></td>
+            <b><button type="submit" name="regist">Выборка</button></b>
+            <input type="radio" name="predicat" value=" AND " checked>'И'
+            <input type="radio" name="predicat" value=" OR ">'ИЛИ'
+            </form>
+        </tr>
     	<?php foreach ($news as $val): ?>
     	<tr>
     		<td><?php echo $val['id']; ?></td>
@@ -28,3 +44,5 @@
     	<?php endforeach; ?>
     	
     </table>
+<br><br>
+

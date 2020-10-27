@@ -5,10 +5,7 @@ use Application\Lib\Db;
 class MainController extends Controller
 {      
 	public function indexAction() {
-      $arr_id = [
-         2, 4, 5
-      ];
-      $result = $this->model->getSelectUser($arr_id);
+    $result = $this->model->selectWhereUsers();
       $vars = [
          'news' => $result,
       ];
